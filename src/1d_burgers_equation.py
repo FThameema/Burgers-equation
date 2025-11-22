@@ -17,7 +17,7 @@ warnings.filterwarnings('ignore')
 plt.rcParams['figure.figsize'] = (10, 6)
 plt.rcParams['animation.html'] = 'jshtml'
 
-print(" Starting Day 1: 1D Burger's Equation")
+print(" 1D Burger's Equation")
 
 # Simulation parameters
 L = 2.0         # Domain length
@@ -216,4 +216,5 @@ sim_time = 1.5
 
 # Call the function with variables
 interactive_burgers(nu=viscosity, initial_amplitude=amplitude, simulation_time=sim_time)
+
 
