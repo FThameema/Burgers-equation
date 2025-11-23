@@ -31,15 +31,15 @@ I implemented an **upwind finite difference scheme**:
  In python
 #  Nonlinear convection - upwind scheme
 if u[i] >= 0:
-    conv = u[i] * (u[i] - u[i-1]) / dx  # Wave moving right
+    $$ conv = u[i] * (u[i] - u[i-1]) / dx $$  # Wave moving right
 else:
-    conv = u[i] * (u[i+1] - u[i]) / dx  # Wave moving left
+    $$ conv = u[i] * (u[i+1] - u[i]) / dx $$  # Wave moving left
 
 # Viscous diffusion
-diff = (u[i+1] - 2*u[i] + u[i-1]) / (dx**2)
+$$ diff = (u[i+1] - 2*u[i] + u[i-1]) / (dx**2)$$
 
 # Time evolution
-u_new[i] = u[i] - dt * conv + dt * nu * diff
+$$ u_new[i] = u[i] - dt * conv + dt * nu * diff $$
 # key features in my implementation
 1- Periodic boundary conditions:u(0,t) = u(L,t) - like a circular domain
 
@@ -51,7 +51,7 @@ Parameter exploaration: study how viscosity changes the behaviour
 
 #What i discovered through coding
 Shock formation visualised 
-Starting with a simple sine wave u = sin(2πx/L), I observed:
+Starting with a simple sine wave $$ u = sin(2πx/L) $$, I observed:
 
 Wave steepening: The sine wave front gets steeper over time
 
