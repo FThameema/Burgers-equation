@@ -37,28 +37,21 @@ else:
 
 # Viscous diffusion
 diff = (u[i+1] - 2*u[i] + u[i-1]) / (dx**2)
-
 # Time evolution
 u_new[i] = u[i] - dt * conv + dt * nu * diff
 # key features in my implementation
 1- Periodic boundary conditions:u(0,t) = u(L,t) - like a circular domain
 
 CFL stability condition: Δt/Δx < 1 to prevent numerical explosions
-
 Real-time animation: Watch shocks form and evolve
-
 Parameter exploaration: study how viscosity changes the behaviour
 
 #What i discovered through coding
 Shock formation visualised 
 Starting with a simple sine wave u = sin(2πx/L), I observed:
-
 Wave steepening: The sine wave front gets steeper over time
-
 Shock development: A discontinuity tries to form
-
 Viscous balancing: Diffusion prevents infinite slopes
-
 Energy dissipation: The wave amplitude decreases over time
 
 The viscosity effects:
@@ -70,7 +63,7 @@ Medium viscosity (ν = 0.01): Balanced - you can see both effects
 cd src/1d
 python 1d_burgers_equation.py
  
-the code will:
+# the code will:
 1) Solve the Burgers equation numerically
 2)Show an animation of shock formation
 3)Display initial vs final state comparison
@@ -82,13 +75,13 @@ viscosity(ν): From smooth diffusion to sharp shocks
 Initial amplitude: How strong the initial wave is.
 Simulation time: Watch short-term vs long-term behavior.
 
-#sample results
+# sample results
 From my simulations:
 Initial smooth sine wave → develops steep front in ~0.5 seconds
 Maximum gradient increases from ~3 to over 15 (shock strength).
 Energy decays exponentially due to viscosity.
 
-#future extensions
+## future extensions
 as I learn more, I plan to;
 Add different initial conditions (square waves, Gaussian pulses)
 Implement spectral methods for higher accuracy
