@@ -80,6 +80,12 @@ From my simulations:
 Initial smooth sine wave → develops steep front in ~0.5 seconds
 Maximum gradient increases from ~3 to over 15 (shock strength).
 Energy decays exponentially due to viscosity.
+<img width="1189" height="490" alt="time_evolution" src="https://github.com/user-attachments/assets/49c6614c-7fd3-41f8-956c-8a55f4fdc1ea" />
+*Progression of velocity profile from t=0 to final state*
+<img width="1189" height="390" alt="viscosity_comparison" src="https://github.com/user-attachments/assets/5b4db493-c73c-48e8-986c-1bd05feb6096" />
+*Comparison of different viscosity values on shock development*
+<img width="1189" height="490" alt="shock_formation" src="https://github.com/user-attachments/assets/fc2246f8-c80c-463f-9043-21bb029a8ee3" />
+*Initial sine wave developing into a shock front over time*
 
 ## future extensions
 as I learn more, I plan to;
