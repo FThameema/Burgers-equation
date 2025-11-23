@@ -80,14 +80,29 @@ From my simulations:
 Initial smooth sine wave → develops steep front in ~0.5 seconds
 Maximum gradient increases from ~3 to over 15 (shock strength).
 Energy decays exponentially due to viscosity.
-<img width="1189" height="490" alt="time_evolution" src="https://github.com/user-attachments/assets/49c6614c-7fd3-41f8-956c-8a55f4fdc1ea" />
-*Progression of velocity profile from t=0 to final state*
-<img width="1189" height="390" alt="viscosity_comparison" src="https://github.com/user-attachments/assets/5b4db493-c73c-48e8-986c-1bd05feb6096" />
-*Comparison of different viscosity values on shock development*
-<img width="1189" height="490" alt="shock_formation" src="https://github.com/user-attachments/assets/fc2246f8-c80c-463f-9043-21bb029a8ee3" />
-*Initial sine wave developing into a shock front over time*
 
-## future extensions
+## time evolution series.
+* smooth sine wave initial condition* ( t=0.0sec)
+<img width="1000" height="600" alt="shock_formation_0 0sec" src="https://github.com/user-attachments/assets/69f8f425-7696-4c4f-a260-b2e7e4064cda" />
+
+* wave begin to steepen *(early development t=0.5sec)
+<img width="1000" height="600" alt="shock_formation_0 5sec" src="https://github.com/user-attachments/assets/ad91ae6a-c466-42d6-a4ef-980866d993c8" />
+
+* clear shock front developing (shock formationt t=1.0sec)
+<img width="1000" height="600" alt="shock_formation_1 0sec" src="https://github.com/user-attachments/assets/8c78e143-eee7-4e1a-944f-d57a6eb798b0" />
+
+* mature shock with viscous balancing (fully developed t=2.0s)
+<img width="1000" height="600" alt="shock_formation_2 0sec" src="https://github.com/user-attachments/assets/b9886bcf-26a8-490a-a5b1-22240a36e38c" />
+
+* time evolution analysis
+*Progression from initial sine wave to shock formation - showing wave steepening and viscous balancing over 2.0 seconds*
+<img width="1189" height="490" alt="time_evolution" src="https://github.com/user-attachments/assets/cf814409-498f-45b8-bc98-52741dbd28ea" />
+
+* Initial final comparison
+ <img width="1189" height="390" alt="initial_final_comparison" src="https://github.com/user-attachments/assets/73cab568-300a-41fc-b527-24dcdac4c914" />
+parison
+  
+  ## future extensions
 as I learn more, I plan to;
 Add different initial conditions (square waves, Gaussian pulses)
 Implement spectral methods for higher accuracy
