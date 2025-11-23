@@ -12,7 +12,7 @@ $$\frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} =
 Burgers equation simplifies this by removing:
 1) **pressure term** $(-\nabla p/\rho)$ - the velocity-pressure coupling.
 2) **3D complexity** - Reduced to 1D for easiness and clarity.
-3) **Body forces** $(\mathbf{F})$ - No external forces.
+3) **Body forces** $(F)$ - No external forces.
 
 And keeping the interesting parts:
 1) **Nonlinear convection** $(u \frac{\partial u}{\partial x})$ - self-interaction and wave steepening
@@ -46,7 +46,7 @@ diff = (u[i+1] - 2*u[i] + u[i-1]) / (dx**2)
 u_new[i] = u[i] - dt * conv + dt * nu * diff
 ```
 
-### key features in my implementation
+## key features in my implementation
 1. **Periodic boundary conditions**: $u(0,t) = u(L,t)$ - like a circular domain
 2. **CFL stability condition**: $\Delta t/\Delta x < 1$ to prevent numerical explosions
 3. **Real-time animation**: Watch shocks form and evolve
@@ -55,7 +55,6 @@ u_new[i] = u[i] - dt * conv + dt * nu * diff
 ## What i discovered through coding
 ### Shock formation visualised 
 Starting with a simple sine wave $u = \sin(2\pi x/L)$, I observed:
-
 - **Wave steepening**: The sine wave front gets steeper over time
 - **Shock development**: A discontinuity tries to form
 - **Viscous balancing**: Diffusion prevents infinite slopes
@@ -72,7 +71,7 @@ cd src/1d
 python 1d_burgers_equation.py
 ```
  
-The code will:
+## the code will:
 1) Solve the Burgers equation numerically
 2) Show an animation of shock formation
 3) Display initial vs final state comparison
@@ -84,14 +83,14 @@ My code includes sliders to change:
 - **Initial amplitude**: How strong the initial wave is.
 - **Simulation time**: Watch short-term vs long-term behavior.
 
-## Sample results
+## sample results
 From my simulations:
 - Initial smooth sine wave → develops steep front in ~0.5 seconds
 - Maximum gradient increases from ~3 to over 15 (shock strength).
 - Energy decays exponentially due to viscosity.
 
-## Future extensions
-As I learn more, I plan to:
+## future extensions
+as I learn more, I plan to:
 - Add different initial conditions (square waves, Gaussian pulses)
 - Implement spectral methods for higher accuracy
 - Study the inviscid limit $(\nu \to 0)$ and shock theory
